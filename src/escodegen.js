@@ -25,8 +25,6 @@ console.log(generateCode)
 // fs.writeFileSync('./generateCode.js', generateCode)
 
 
-
-
 const folderName = path.resolve(__dirname, 'dist')
 if (!fs.existsSync(folderName)) {
     fs.mkdirSync(folderName);

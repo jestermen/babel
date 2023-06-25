@@ -6,8 +6,6 @@ const code = fs.readFileSync('./acorn_code.js')
 
 const ast = acorn.parse(code)
 
-// console.log(ast)
-
 walk.simple(ast, {
     Literal(node) {
         console.log(node)
@@ -15,5 +13,3 @@ walk.simple(ast, {
         console.log(node)
     }
 })
-
-// console.dir(ast)

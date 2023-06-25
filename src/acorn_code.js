@@ -4,5 +4,3 @@ function func() {
 }
 
 func()
-
-// const name = 'acorn-walk'
