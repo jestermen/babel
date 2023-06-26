@@ -7,6 +7,7 @@ const code = fs.readFileSync('./acorn_code.js')
 const ast = acorn.parse(code)
 
 walk.simple(ast, {
+    // 字面量
     Literal(node) {
         console.log(node)
         node.value = 100
