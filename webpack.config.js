@@ -1,6 +1,6 @@
 const path = require('path')
 const removeConsole = require('./src/babel-plugin/removeConsole')
-console.log(removeConsole)
+const chainingPlugin = require('./src/babel-plugin/chainingPlugin')
 
 module.exports = {
     mode: 'development',
@@ -17,7 +17,10 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        plugins: [removeConsole]
+                        plugins: [
+                            removeConsole, 
+                            // chainingPlugin
+                        ]
                     }
                 }
             }
